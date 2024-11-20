@@ -4,10 +4,9 @@ const contactList = [
     { name: "Bob Johnson", phone: "3456 789 012", email: "bob.johnson@example.com" }
 ];
 
-
 function displayContactList() {
     contactList.forEach((contact, index) => {
-        console.log(${index + 1}. Name: ${contact.name}, Phone: ${contact.phone}, Email: ${contact.email});
+        console.log(`${index + 1}. Name: ${contact.name}, Phone: ${contact.phone}, Email: ${contact.email}`);
     });
 }
 
@@ -18,7 +17,7 @@ function addNewContact() {
         email: "risus.quisque@urna.ca"
     };
     contactList.push(newContact);
-    alert(The new contact added was: ${newContact.name} with email ${newContact.email} and phone ${newContact.phone})
+    alert(`The new contact added was: ${newContact.name} with email ${newContact.email} and phone ${newContact.phone}`);
     console.log("-- Updated Contact List --");
     const button = document.getElementById("addButton");
     button.disabled = true;
@@ -35,7 +34,5 @@ function displayFirstAndLastContacts() {
     }
 }
 
-
-
 console.log("-- First Contact List --");
-displayContactList()
+displayContactList();
